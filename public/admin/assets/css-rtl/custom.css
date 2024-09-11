@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
+
+body,h1,h2,h3,h4,h5,h6,a,p,span,strong{
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+@media (max-width: 480px) {
+
+    .main-header-right .nav .nav-item .dropdown-menu {
+        left: 5px !important;
+        top: 60px !important;
+    }
+}
+
+.side-menu .slide .side-menu__item {
+    padding: 0 10px 0 10px !important;
+}
+.side-menu .slide .side-menu__item i {
+    margin-left: 0.5rem !important;
+    text-align: center;
+    width: 1.25em;
+    color: #5b6e88;
+}
+.side-menu .active .side-menu__item i {
+    color: #005ee9;
+}
+.side-menu .slide {
+    border-bottom: 1px solid #ecf0fa;
+    margin: 0;
+}
+.side-menu .active{
+    background-color: #ecf0fa;
+}
+.side-menu .slide:last-child {
+    border-bottom: unset;
+}
+.side-menu .slide:hover,
+.side-menu .slide:hover i {
+    color: #005ee9;
+    background-color: #ecf0fa;
+}
+.side-menu .slide:hover ul{
+    background-color: #FFF;
+}
+.slide ul {
+    padding: 0 !important;
+}
+.side-menu .slide ul li:hover {
+    color: #005ee9;
+    background-color: #ecf0fa;
+}
+
+#DataTables_Table_0_length label,
+.dataTables_filter label{
+    text-align: right !important;
+}
+
+.pass_show{position: relative} 
+.pass_show .ptxt { 
+    position: absolute; 
+    top: 50%; 
+    left: 10px; 
+    z-index: 1; 
+    color: #fff; 
+    margin-top: -10px; 
+    cursor: pointer; 
+    transition: .3s ease all;
+    background: #dc3545;
+    padding: 1px 8px 2px 8px;
+    border-radius: 5px;
+} 
+.pass_show .ptxt:hover{color: #e9ecef;}
+
+.app-sidebar .slide-menu a:before {
+    right: 15px !important;
+    top: 12px !important;
+}
+.slide-item {
+    padding: 0 30px 0 0 !important;
+}
+.btn {
+    cursor: pointer !important;
+}

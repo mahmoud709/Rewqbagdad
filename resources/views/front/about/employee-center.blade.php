@@ -29,9 +29,9 @@
         background-color: var(--new-color)
     }
 
-    .ceo-img img {
+    /* .ceo-img img {
         width: 100%;
-    }
+    } */
 
     @media (max-width:767px) {
         .members-center .text-heading h1 {
@@ -72,7 +72,7 @@
     <section class="members-center bg-white">
         <div class="container my-5 mb-5 ">
             <div class="text-heading text-center">
-                <h1 class="mx-auto font-semibold md:w-50">
+                <h1 class="mx-auto md:w-50">
                     {{ __('front.mahawir_section_title') }}
                 </h1>
             </div>
@@ -80,14 +80,14 @@
                 <div class="row justify-content-center align-items-start">
                     @foreach ($mahawirs as $mahawir)
                         <div class="col-md-4 pb-5 pt-2 ">
-                            <div class="p-2 py-3 rounded" style="height: 280px">
+                            <div class="p-2 py-3 rounded h-full" >
                                 <div
                                     class="card-title py-1 rounded d-flex justify-content-center align-items-center bg-white">
                                     <img src="{{ $mahawir->photo }}" alt="title-img" />
                                     <h3 class="font-bold p-2">{{ $mahawir->translation->title }} </h3>
                                 </div>
                                 <div class="card-body">
-                                    <p class="font-bold text-white py-2 pt-4">
+                                    <p class="text-white p-2 pt-4 font-bold">
                                         {{ $mahawir->translation->description }}
                                     </p>
                                 </div>
@@ -100,7 +100,7 @@
 
             <section class="ceo-speech container rounded my-5">
                 <div class="speech-info py-5 px-4 my-5">
-                    <h3 class="font-bold text-white">كلمة رئيس المركز :</h3>
+                    <h3 class="font-bold text-white">{{__('front.speech_of_the_center_president')}}</h3>
                     <p class="text-white" style="font-size: 21px"> {!! $headOfcenterWord->translation->content !!} </p>
                     <div class="ceo-img" style="width: 280px">
                         <img src="{{ $headOfcenterWord->photo }}" alt="ceo-img" class="mx-auto rounded-30" />
@@ -108,63 +108,6 @@
                 </div>
             </section>
 
-
-            {{-- <div class="row mb-5">
-            <div class="col-lg-12">
-                <div class="title-page text-center d-block">
-                    {{ __('front.board_directors') }}
-                 </div>
-                 @php
-                    $description = "description_".appLangKey();
-                 @endphp
-                <p class="desc">{{ $setting->$description }}</p>
-            </div>
-        </div> --}}
-
-            {{-- @if (!$teamsCBD->isEmpty())
-                <div class="col-lg-12">
-                    @if (appLangKey() == 'ar')
-                    <img src="/front/assets/img/ceo.png" class="img-fluid ceo-img" alt="">
-                    @else
-                    <img src="/front/assets/img/ceoEn.png" class="img-fluid ceo-img" alt="">
-                    @endif
-                </div>
-            @endif --}}
-
-            {{-- @foreach ($teamsCBD as $CBD)
-                <div class="modal fade" id="CBD-{{$CBD->id}}" tabindex="-1" aria-labelledby="CBD-{{$CBD->id}}Title"  aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered max-w-100">
-                    <div class="modal-content">
-                        <div class="modal-header height45">
-
-                            <a href="#" data-bs-dismiss="modal" aria-label="Close">
-                                <img src="/front/assets/img/close.png" class="close" alt="close">
-                            </a>
-                        </div>
-                        <div class="modal-body text-center modal-body-padding">
-                            <div class="img-box"><img src="{{ $CBD->img }}" alt="members"></div>
-                            <p class="name">{{ $CBD->translation->name }}</p>
-                            <a href="mailto:{{ $CBD->email }}">{{ $CBD->email }} <img src="/front/assets/img/mail.png" alt=""></a>
-                            <p>{!! $CBD->translation->description !!}</p>
-                            @if (!empty($CBD->cv_link))
-                                <a href="{{ url($CBD->cv_link) }}" class="btn btn-info text-white">{{ __('front.to_go_to_resume') }}</a>
-                            @endif
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#CBD-{{$CBD->id}}">
-                        <div class="img-box"><img src="{{ $CBD->img }}" alt="{{ $CBD->translation->name }}"></div>
-                    <div class="desc-member">
-                        <small>
-                            <strong>{{ $CBD->translation->name }}</strong>
-                        </small>
-                        <p>{{ $CBD->translation->job_title }}</p>
-                    </div>
-                    </a>
-                </div>
-            @endforeach --}}
             <div class="row justify-content-center align-items-center">
 
                 @if (!$teamsCEO->isEmpty())
@@ -264,16 +207,6 @@
                     </div>
                 @endforeach
 
-                {{--
-                @if (!$teamsEMP->isEmpty())
-                    <div class="col-md-12">
-                        @if (appLangKey() == 'ar')
-                            <img src="/front/assets/img/emploayee.png" class="img-fluid ceo-img" alt="">
-                        @else
-                            <img src="/front/assets/img/emploayeeEn.png" class="img-fluid ceo-img" alt="">
-                        @endif
-                    </div>
-                @endif --}}
                 <div class="my-5 text-center">
                     <h3 class="font-bold">{{ __('front.staff_corridor') }}</h3>
                 </div>

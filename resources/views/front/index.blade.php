@@ -132,7 +132,6 @@
         <div class="swiper-container">
             <div class="swiper mySwiper swiper-h">
                 <div class="swiper-wrapper">
-
                     @foreach ($sliders as $slider)
                         <div class="swiper-slide">
                             @if (!empty($slider->btn_url))
@@ -204,9 +203,11 @@
     <section class="center-activity mt-8">
         <div class="container">
             <div class="section-title justify-content-center pb-30 ">
-                <div class="section-heading pb-30 text-center shadow-sm mx-auto rounded-30 my-3">
-                    <h2 class="font-bold p-3">{{ __('front.activities') }}</h2>
-                </div>
+                <a href="/activities">
+                    <div class="section-heading pb-30 text-center shadow-sm mx-auto rounded-30 my-3">
+                        <h2 class="font-bold p-3">{{ __('front.activities') }}</h2>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -265,11 +266,9 @@
     {{-- Projects Section --}}
     <section class="container">
         <div class="section-title justify-content-center text-right pb-30">
-            <a href="/activities">
                 <div class="section-heading pb-30 text-center shadow-sm mx-auto rounded-30 my-3">
                     <h2 class="font-bold p-3">{{ __('front.project_marakaz') }}</h2>
                 </div>
-            </a>
         </div>
         <div class="projects row justify-content-center align-items-center">
             <div class="col-6 col-md-3 my-2">

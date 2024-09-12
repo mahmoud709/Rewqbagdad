@@ -212,6 +212,7 @@ return [
     'mahawir_section_title' => "Rwaq Baghdad Center for Public Policy, an intellectual center so that the main axes can be accessed :",
     '' => '',
     '' => '',
+    'speech_of_the_center_president'=>'Speech of the Center President',
     'board_members'=>"Board Members",
     'staff_corridor' => "Staff corridor",
 

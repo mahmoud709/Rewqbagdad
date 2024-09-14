@@ -21,14 +21,14 @@ html[lang="en"]{
     }
 }
 /* Media query for screens larger than 767px */
-@media (min-width: 767px) {
+/* @media (min-width: 767px) {
     html[lang="en"] .ceo-img {
         position: absolute;
         right: 0px;
         top: -30px;
         bottom: -30px;
     }
-}
+} */
 
 /* style at english version */
 :root {
@@ -83,7 +83,7 @@ html[lang="en"]{
     border: 1.7px solid var(--white-color);
 }
 
-@media (min-width:767px) {
+/* @media (min-width:767px) {
     .speech-info {
         position: relative;
     }
@@ -94,7 +94,7 @@ html[lang="en"]{
         top: -30px;
         bottom: -30px;
     }
-}
+} */
 
 .projects {
     justify-content: center;

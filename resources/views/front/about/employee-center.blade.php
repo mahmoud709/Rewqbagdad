@@ -29,6 +29,10 @@
         background-color: var(--new-color)
     }
 
+    .speech-info .content {
+        flex: 3
+    }
+
     /* .ceo-img img {
         width: 100%;
     } */
@@ -38,20 +42,19 @@
             width: 100%;
         }
     }
-
-    @media (min-width:767px) {
-        .speech-info {
-            position: relative;
-        }
-
-        .ceo-img {
-            position: absolute;
-            left: 30px;
-            top: -30px;
-            bottom: -30px;
-
-        }
+@media (min-width: 768px) {
+    .ceo-img {
+        position: absolute;
+        right: 0;
+        top: -20px;
+        bottom: -20px;
     }
+
+    :lang(ar) .ceo-img {
+        left: 0;
+    }
+}
+
 </style>
 
 @section('content')
@@ -80,7 +83,7 @@
                 <div class="row justify-content-center align-items-start">
                     @foreach ($mahawirs as $mahawir)
                         <div class="col-md-4 pb-5 pt-2 ">
-                            <div class="p-2 py-3 rounded h-full" >
+                            <div class="p-2 py-3 rounded h-full">
                                 <div
                                     class="card-title py-1 rounded d-flex justify-content-center align-items-center bg-white">
                                     <img src="{{ $mahawir->photo }}" alt="title-img" />
@@ -98,15 +101,17 @@
                 </div>
             </div>
 
-            <section class="ceo-speech container rounded my-5">
-                <div class="speech-info py-5 px-4 my-5">
-                    <h3 class="font-bold text-white">{{__('front.speech_of_the_center_president')}}</h3>
-                    <p class="text-white" style="font-size: 21px"> {!! $headOfcenterWord->translation->content !!} </p>
-                    <div class="ceo-img" style="width: 280px">
-                        <img src="{{ $headOfcenterWord->photo }}" alt="ceo-img" class="mx-auto rounded-30" />
+            <div class="ceo-speech container rounded my-5">
+                <div class="speech-info py-5 px-4 my-5 d-flex justify-content-between position-relative">
+                    <div class="content flex-grow-1">
+                        <h3 class="font-bold text-white">{{ __('front.speech_of_the_center_president') }}</h3>
+                        <p class="text-white" style="font-size: 21px"> {!! $headOfcenterWord->translation->content !!} </p>
                     </div>
+                    {{-- <div class="ceo-img" style="width: 280px">
+                        <img src="{{ $headOfcenterWord->photo }}" alt="ceo-img" class="mx-auto rounded-30" />
+                    </div> --}}
                 </div>
-            </section>
+            </div>
 
             <div class="row justify-content-center align-items-center">
 

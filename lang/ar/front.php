@@ -16,7 +16,7 @@ return [
   'center_members' => 'اعضاء المركز',
   'board_directors' => 'مجلس الإدارة',
   'to_go_to_resume' => 'للذهاب للسيرة الذاتية',
-  'spceial_version' => 'اصدرارت خاصة',
+  'spceial_version' => 'اصدارات خاصة',
   'authors' => 'الكتاب',
   'bodcast' => 'فكّر',
   'versions' => 'اصدارات',

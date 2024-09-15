@@ -17,9 +17,9 @@ class BookteamController extends Controller
         // $this->middleware('authadmin:bookteam_edit')->only('edit', 'update');
         // $this->middleware('authadmin:bookteam_delete')->only('destroy');
 
-        
+
         $this->middleware('permission:read-bookTeam')->only('json','index','UpdateDescription');
-        $this->middleware('permission:update-bookTeam')->only('create','store');
+        $this->middleware('permission:create-bookTeam')->only('create','store');
         $this->middleware('permission:edit-bookTeam')->only('edit', 'update');
         $this->middleware('permission:delete-bookTeam')->only('destroy');
     }
@@ -81,14 +81,14 @@ class BookteamController extends Controller
 
             'name' => 'required|array',
             'name.*' => 'required|string|max:50',
-            
+
             'job_title' => 'required|array',
             'job_title.*' => 'required|string|max:50',
 
             'description' => 'required|array',
             'description.*' => 'required|string|max:55000',
         ]);
-        
+
         $row = new Bookteam;
         $row->email = $request->email;
         $row->cv_link = $request->cv_link;
@@ -145,7 +145,7 @@ class BookteamController extends Controller
 
             'name' => 'required|array',
             'name.*' => 'required|string|max:50',
-            
+
             'job_title' => 'required|array',
             'job_title.*' => 'required|string|max:50',
 

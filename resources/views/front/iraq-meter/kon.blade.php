@@ -85,7 +85,7 @@
                                     alt="admin-img">
                             </figure>
                             <h4>
-                                <a href="#">مدير المشروع : <span
+                                <a href="#"> {{ __('front.project_manager') }} : <span
                                         class=" magazine-emp-namecolor text-white">{{ $kon->translation->project_manager }}</span></a>
                             </h4>
                         </div>
@@ -168,7 +168,7 @@
         </div>
     </section>
     @if (!$upcomingtrainings->isEmpty())
-        <section class="our-trainings mt-5">
+        <section class="our-trainings">
             <div class="container">
                 <div class="section-title text-right pb-30">
                 </div>
@@ -183,7 +183,7 @@
                                 <a href="{{ route('kon.upcommingTrainingDetails', $upcomingtraining->slug) }}">
                                     <div class="pb-3 pt-3">
                                         <img src="{{ $upcomingtraining->photo }}" alt="{{ $upcomingtraining->translation->title }}"
-                                            class="border-0 rounded ">
+                                            class="border-0 rounded" height="200px">
                                     </div>
                                     <small class="title-sec mb-1">
                                         <strong>{{ formatDate($upcomingtraining->created_at) }}</strong>
@@ -271,7 +271,7 @@
             <div class="row">
                 <div class="col-lg-12 section-heading mx-auto">
                     <h2 class="my-5 text-center shadow-sm mx-auto rounded-30 font-bold p-3">
-            طلب تدريب
+                        {{ __('front.requestTraining') }}
                     </h2>
                 </div>
             </div>

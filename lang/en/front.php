@@ -211,6 +211,8 @@ return [
     'our_articles'=>"Articles",
     'follow-us-text'=>"Stay connected with us on social media and be the first to know about our latest updates, events, and more.",
     'mahawir_section_title' => "Rwaq Baghdad Center for Public Policy, an intellectual center so that the main axes can be accessed :",
+    "project_manager" => "project manager",
+    'requestTraining'=>'Request Training',
     '' => '',
     '' => '',
     'speech_of_the_center_president'=>'Speech of the Center President',

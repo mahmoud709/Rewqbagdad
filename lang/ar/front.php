@@ -204,11 +204,12 @@ return [
   'bodcast_fakar' => 'بودكاست فكر',
   'num_copies' => 'عدد النسخ',
   'booking_your_copy' => 'احجز نسختك',
-
+'requestTraining'=>'طلب تدريب',
   'personal_address'  => 'العنوان الشخصي',
   'our_vision_section_title' => " رؤيتنا",
   'our_target_section_title' => "اهدافنا",
   'our_message' => "رسالتنا",
+  "project_manager" => "مدير المشروع",
   'our_articles'=>"مقالاتنا",
   'follow-us-text'=>"ابق على تواصل معنا عبر وسائل التواصل الاجتماعي وكن أول من يعرف بأحدث تحديثاتنا وأحداثنا والمزيد.",
   'mahawir_section_title' => "مركز رواق بغداد للسياسات العامة، مركز فكري يهتم بثلاثة محاور رئيسية:",

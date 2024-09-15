@@ -117,7 +117,7 @@
                                     alt="admin-img">
                             </figure>
                             <h4>
-                                <a href="#">مدير المشروع : <span
+                                <a href="#">{{__('front.project_manager')}} : <span
                                         class=" magazine-emp-namecolor text-white">{{ $medadInfo->translation->project_manager }}</span></a>
                             </h4>
                         </div>

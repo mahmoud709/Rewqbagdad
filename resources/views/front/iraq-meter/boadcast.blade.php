@@ -161,7 +161,7 @@
     <section class="my-5 videos-sec">
         <a href="{{ route('bodcast.afkarFakar') }}">
             <div class="section-heading pb-30 text-center shadow-sm mx-auto rounded-30 my-3">
-                <h2 class="font-bold p-3">{{ __('front.our_articles') }}</h2>
+                <h2 class="font-bold p-3">{{ __('front.afkar_fakar') }}</h2>
             </div>
         </a>
     </section>
@@ -215,7 +215,7 @@
     <section class="my-5 videos-sec">
         <a href="{{ route('bodcast.blogs') }}">
             <div class="section-heading pb-30 text-center shadow-sm mx-auto rounded-30 my-3">
-                <h2 class="font-bold p-3">{{ __('front.our_blogs') }}</h2>
+                <h2 class="font-bold p-3">{{ __('front.our_articles') }}</h2>
             </div>
         </a>
     </section>
@@ -244,7 +244,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="btns d-flex justify-content-start align-items-start">
+                                    <div class="btns d-flex justify-content-center align-items-center">
                                         <a href="{{ $blog->pdf }}" target="_blank"
                                             class="p-2 rounded ">{{ __('front.read_more') }}</a>
                                         {{-- <a href="#" target="_blank"
@@ -265,11 +265,9 @@
         </section>
     @endif
     <section class="my-5 videos-sec">
-        <a href="">
             <div class="section-heading pb-30 text-center shadow-sm mx-auto rounded-30 my-3">
-                <h2 class="font-bold p-3">تواصل معنا</h2>
+                <h2 class="font-bold p-3">{{__('front.contact_us')}}</h2>
             </div>
-        </a>
     </section>
     <section class="contact-page-section asking asking-visit">
         <div class="container p-5">

@@ -14,41 +14,41 @@ class AboutController extends Controller
     public function __construct()
     {
         $this->middleware('permission:read-about');
-        $this->middleware('permission:update-about');
+        $this->middleware('permission:edit-about');
     }
-    
+
     public function index()
-    {   
+    {
 
         $row = About::with('translations','alltargets','allvisions','allmeans','ourMessage')->first();
         return view('admin.about.index', compact('row'));
     }
-    
+
     public function update(Request $request)
     {
-        
-     
+
+
         $validatedData = $request->validate([
             'img1' => 'required|string|max:200',
             'img2' => 'required|string|max:200',
-            
+
             'description' => 'array',
             'description.*' => 'required|string',
-            
+
             'target_ar' => 'array',
             'target_ar.*' => 'required|max:255',
             'target_en' => 'array',
             'target_en.*' => 'required|max:255',
 
-          
+
             'vision_ar' => 'required|max:255',
 
             'vision_en' => 'required|max:255',
-          
+
             'message_ar' => 'required|max:255',
 
             'message_en' => 'required|max:255',
-            
+
             'means_ar' => 'array',
             'means_ar.*' => 'required|string|max:255',
             'means_en' => 'array',
@@ -67,7 +67,7 @@ class AboutController extends Controller
         AboutTranslation::where(['locale'=>'en'])->update([
             'description' => $request->description['en'],
         ]);
-        
+
 
         \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
             AboutData::truncate();
@@ -98,7 +98,7 @@ class AboutController extends Controller
                 'type'        => 'our_message',
                 'about_id'      => $id
             ]);
-        
+
         foreach ($request->means_ar as $meanKey => $means) :
             $mean = new AboutData;
             $mean->type = 'means';
@@ -107,9 +107,9 @@ class AboutController extends Controller
             $mean->about_id = $id;
             $mean->save();
         endforeach;
-        
+
         return back()->with('success', __('global.alert_done_update'));
     }
 
-    
+
 }

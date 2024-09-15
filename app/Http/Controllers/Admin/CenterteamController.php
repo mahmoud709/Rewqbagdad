@@ -20,7 +20,7 @@ class CenterteamController extends Controller
         // $this->middleware('authadmin:centerteam_delete')->only('destroy');
 
         $this->middleware('permission:read-centerTeam')->only('json','index','UpdateDescription');
-        $this->middleware('permission:update-centerTeam')->only('create','store');
+        $this->middleware('permission:create-centerTeam')->only('create','store');
         $this->middleware('permission:edit-centerTeam')->only('edit', 'update');
         $this->middleware('permission:delete-centerTeam')->only('destroy');
     }
@@ -87,7 +87,7 @@ class CenterteamController extends Controller
             'description' => 'required|array',
             'description.*' => 'required|string|max:900',
         ]);
-        
+
         $row = new Centerteam;
         $row->email = $request->email;
         $row->cv_link = $request->cv_link;

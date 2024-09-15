@@ -105,7 +105,7 @@
                                     alt="admin-img">
                             </figure>
                             <h4>
-                                <a href="#">مدير المشروع : <span
+                                <a href="#">{{ __('front.project_manager') }} : <span
                                         class=" magazine-emp-namecolor text-white">{{ $etmamInfo->translation->project_manager }}</span></a>
                             </h4>
                         </div>
@@ -254,7 +254,7 @@
                 <div class="col-lg-6">
                     {{-- <img src="{{ url('front') }}/assets/img" class="top-img img-fluid" alt=""> --}}
                     <div class="content-box">
-                        <p>{{__('front.follow-us-text')}}</p>
+                        <p>{{ __('front.follow-us-text') }}</p>
                         <ul class="social-box">
                             <a href="https://www.facebook.com/profile.php?id=61558814862412">
                                 <li>

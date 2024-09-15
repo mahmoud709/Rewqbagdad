@@ -208,6 +208,7 @@ return [
     'our_vision_section_title' => "The vision of the Rwaq Baghdad Center for Public Policy:",
     'our_target_section_title' => "Objectives of the Rwaq Baghdad Center for Public Policy:",
     'our_message' => "Our message",
+    'our_articles'=>"Articles",
     'follow-us-text'=>"Stay connected with us on social media and be the first to know about our latest updates, events, and more.",
     'mahawir_section_title' => "Rwaq Baghdad Center for Public Policy, an intellectual center so that the main axes can be accessed :",
     '' => '',

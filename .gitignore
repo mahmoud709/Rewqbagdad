@@ -5,7 +5,6 @@
 /public/storage
 /storage/*.key
 /storage/tracking
-/vendor
 .env.backup
 .phpunit.result.cache
 Homestead.json
